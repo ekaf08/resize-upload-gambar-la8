@@ -35,3 +35,19 @@ class ImageController extends Controller
         return back()->with('success', 'Image Upload Successful')->with('imageName', $input['imagename']);
     }
 }
+
+// note : 
+// install : composer require intervention/image
+// setting di config/app.php
+// return [
+//    
+//     $provides => [
+//         
+//         Intervention\Image\ImageServiceProvider::class
+
+//     ],
+
+//     $aliases => [
+//         'Image' => Intervention\Image\Facades\Image::class
+//     ]
+// ]
