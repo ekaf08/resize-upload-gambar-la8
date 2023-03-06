@@ -30,7 +30,7 @@ class ImageController extends Controller
         })->save($destinationPath . '/' . $input['imagename']);
 
         $destinationPath = public_path('/images');
-        $image->move($destinationPath, $input['imagename']);
+        $image->move($destinationPath, $input['original']);
 
         return back()->with('success', 'Image Upload Successful')->with('imageName', $input['imagename']);
     }
